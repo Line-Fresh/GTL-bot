@@ -4,9 +4,9 @@ import os
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
 import configparser
-
+import json
 app = Flask(__name__)
 
 
@@ -30,14 +30,23 @@ def callback():
     return 'Nice'
 
 
+def isGreeting(msg):
+    greeting = ["hello", "hi", "哈囉", "嗨", "海螺"]
+    flag = False
+    for m in greeting:
+        if msg.lower() in m or m in msg.lower():
+            flag = True
+    return flag
 
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
-    print(event)
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text)
-    )
+    msg = event.message.text
+    profile = line_bot_api.get_profile(event.source.user_id)
+    if isGreeting(msg):
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="Hello " + profile.display_name[1:])
+        )
 
 if __name__ == "__main__":
     app.run()
