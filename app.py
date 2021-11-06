@@ -4,10 +4,15 @@ import os
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, FlexSendMessage, DatetimePickerAction, QuickReply, QuickReplyButton
 import configparser
 import json
+import datetime
 app = Flask(__name__)
+
+
+
+
 
 
 # LINE BOT INFORMATION
@@ -15,6 +20,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 line_bot_api = LineBotApi(config['line-bot']['channel_access_token'])
 handler = WebhookHandler(config['line-bot']['channel_secret'])
+
 
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
@@ -28,16 +34,47 @@ def callback():
         abort(400)
     return 'Nice'
 
-def ScheduleHandler(event, profile):
-    line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text="Hello " + profile.display_name[1:])
-        )
+def ScheduleHandler(event, profile, msg):
+    if msg == "行程表/導遊":
+        FlexMessage = json.load(open('jsonfile/flex.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg == "挑選導遊" or msg == "重新選擇":
+        FlexMessage = json.load(open('jsonfile/tour.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg[:2] == "選擇":
+        guide = msg[2:]
+        FlexMessage = json.load(open('jsonfile/guide.json','r',encoding='utf-8'))
+        FlexMessage[guide]["body"]["contents"][2]["contents"][0]["contents"][1]["text"] = profile.display_name
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
+            )
 def FoodHandler(event, profile):
+    message=TextSendMessage(
+        text="文字訊息",
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    action=DatetimePickerAction(label="時間選擇",data="時間選擇",mode='datetime')
+                    )
+                ]
+            )
+    )
     line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text="Hello " + profile.display_name[1:])
-        )
+                event.reply_token,
+                message
+            )
+
+    # line_bot_api.reply_message(
+    #         event.reply_token,
+    #         TextSendMessage(text="Hello " + profile.display_name[1:])
+    #     )
 def SiteHandler(event, profile):
     line_bot_api.reply_message(
             event.reply_token,
@@ -60,8 +97,8 @@ def GGHandler(event, profile):
 def messageHandler(event):
     msg = event.message.text
     profile = line_bot_api.get_profile(event.source.user_id)
-    if msg == "行程表/導遊":
-        ScheduleHandler(event, profile)
+    if msg == "行程表/導遊" or msg == "挑選導遊" or msg[:2] == "選擇" or msg == "重新選擇": 
+        ScheduleHandler(event, profile, msg)
     elif msg == "美食":
         FoodHandler(event, profile)
     elif msg == "景點介紹/預約":

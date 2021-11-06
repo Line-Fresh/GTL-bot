@@ -1,0 +1,221 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "尋找導遊",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "挑選導遊來帶您一同深入領略虎尾文化、風景。",
+                      "wrap": true,
+                      "color": "#8c8c8c",
+                      "size": "xs",
+                      "flex": 5
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "separator",
+              "margin": "xxl"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "lg",
+          "margin": "none"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "虎尾官網",
+                "uri": "https://www.huwei.gov.tw/content/index.aspx?Parser=1,7,55"
+              },
+              "margin": "xs",
+              "height": "sm",
+              "offsetTop": "none",
+              "offsetBottom": "xs",
+              "offsetStart": "none",
+              "adjustMode": "shrink-to-fit",
+              "flex": 1
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "點擊挑選",
+                "text": "挑選導遊"
+              },
+              "offsetTop": "none",
+              "offsetBottom": "none",
+              "style": "link",
+              "height": "sm",
+              "flex": 1
+            }
+          ],
+          "spacing": "none",
+          "margin": "none"
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip11.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "推薦行程",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "wrap": true,
+                      "color": "#8c8c8c",
+                      "size": "xs",
+                      "flex": 5,
+                      "text": "參考過往遊客的旅程建議，找出屬於您的最佳旅程。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "separator"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "點擊查看",
+                "uri": "https://travel.line.me/r/HSnQGmNqHk"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip12.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "安排行程",
+              "weight": "bold",
+              "size": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "wrap": true,
+                      "color": "#8c8c8c",
+                      "size": "xs",
+                      "flex": 5,
+                      "text": "透過您的偏好來自動化生成行程"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "separator"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "開始安排行程",
+                "text": "開始安排行程"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

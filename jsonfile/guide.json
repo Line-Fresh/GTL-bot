@@ -1,0 +1,431 @@
+{
+    "Johnson":{
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/eBa6i9u.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+        },
+        "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "text",
+            "text": "Johnson",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+            },
+            {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+                {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                "type": "text",
+                "text": "5.0",
+                "size": "xs",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+                }
+            ]
+            },
+            {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約者",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "Oscar",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約時間",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "10:00 - 23:00",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                }
+                ]
+            }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+        },
+        "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "separator"
+            },
+            {
+            "type": "button",
+            "action": {
+                "type": "message",
+                "label": "重新選擇",
+                "text": "重新選擇"
+            },
+            "offsetBottom": "none",
+            "offsetTop": "lg"
+            },
+            {
+            "type": "button",
+            "action": {
+                "type": "uri",
+                "label": "聯絡",
+                "uri": "http://linecorp.com/"
+            }
+            }
+        ]
+        }
+    }, 
+    "Hung" : {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://i.imgur.com/TJJwXQ6.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Hung",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                },
+                {
+                  "type": "text",
+                  "text": "4.0",
+                  "size": "sm",
+                  "color": "#8c8c8c",
+                  "margin": "md",
+                  "flex": 0
+                }
+              ]
+            },
+            {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約者",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "Oscar",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約時間",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "10:00 - 23:00",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                }
+                ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "separator"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "重新選擇",
+                "text": "重新選擇"
+              },
+              "offsetTop": "lg"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "聯絡",
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ]
+        }
+    },
+    "Han" : {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://scontent.ftpe8-2.fna.fbcdn.net/v/t31.18172-8/416725_180697048731223_1392091724_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=de6eea&_nc_ohc=AyZwVQDFT8wAX8StdzC&_nc_ht=scontent.ftpe8-2.fna&oh=fa6eeac9c0558ae69b64d03d619d0af5&oe=61A9C12E",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "\bHan",
+              "weight": "bold",
+              "size": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                },
+                {
+                  "type": "icon",
+                  "size": "xs",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                },
+                {
+                  "type": "text",
+                  "text": "4.0",
+                  "size": "sm",
+                  "color": "#8c8c8c",
+                  "margin": "md",
+                  "flex": 0
+                }
+              ]
+            },
+            {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約者",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "Oscar",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "預約時間",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 1
+                    },
+                    {
+                        "type": "text",
+                        "text": "10:00 - 23:00",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 1
+                    }
+                    ]
+                }
+                ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "separator"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "重新選擇",
+                "text": "重新選擇"
+              },
+              "offsetTop": "lg"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "聯絡",
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ]
+        }
+      }
+}
