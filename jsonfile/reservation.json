@@ -1,15 +1,17 @@
 {
-    "type": "carousel",
-    "contents": [
-      {
+    "Johnson":{
         "type": "bubble",
         "size": "kilo",
         "hero": {
           "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+          "url": "https://i.imgur.com/eBa6i9u.jpg",
           "size": "full",
+          "aspectRatio": "20:13",
           "aspectMode": "cover",
-          "aspectRatio": "320:213"
+          "action": {
+            "type": "uri",
+            "uri": "http://linecorp.com/"
+          }
         },
         "body": {
           "type": "box",
@@ -17,14 +19,15 @@
           "contents": [
             {
               "type": "text",
-              "text": "尋找導遊",
+              "text": "Johnson",
               "weight": "bold",
-              "size": "sm",
-              "wrap": true
+              "size": "xl"
             },
             {
               "type": "box",
               "layout": "vertical",
+              "margin": "lg",
+              "spacing": "sm",
               "contents": [
                 {
                   "type": "box",
@@ -33,189 +36,204 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "挑選導遊來帶您一同深入領略虎尾文化、風景。",
+                      "text": "選擇預約時間",
                       "wrap": true,
-                      "color": "#8c8c8c",
-                      "size": "xs",
+                      "color": "#666666",
+                      "size": "sm",
                       "flex": 5
                     }
                   ]
                 }
               ]
-            },
-            {
-              "type": "separator",
-              "margin": "xxl"
             }
-          ],
-          "spacing": "sm",
-          "paddingAll": "lg",
-          "margin": "none"
+          ]
         },
         "footer": {
           "type": "box",
           "layout": "vertical",
+          "spacing": "sm",
           "contents": [
             {
               "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "虎尾官網",
-                "uri": "https://www.huwei.gov.tw/content/index.aspx?Parser=1,7,55"
-              },
-              "margin": "xs",
-              "height": "sm",
-              "offsetTop": "none",
-              "offsetBottom": "xs",
-              "offsetStart": "none",
-              "adjustMode": "shrink-to-fit",
-              "flex": 1
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "message",
-                "label": "點擊開始",
-                "text": "挑選導遊"
-              },
-              "offsetTop": "none",
-              "offsetBottom": "none",
               "style": "link",
               "height": "sm",
-              "flex": 1
-            }
-          ],
-          "spacing": "none",
-          "margin": "none"
-        }
-      },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip11.jpg",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "推薦行程",
-              "weight": "bold",
-              "size": "sm",
-              "wrap": true
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "wrap": true,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5,
-                      "text": "參考過往遊客的旅程建議，找出屬於您的最佳旅程。"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "separator"
-            },
-            {
-              "type": "button",
               "action": {
-                "type": "uri",
-                "label": "點擊查看",
-                "uri": "https://travel.line.me/r/HSnQGmNqHk"
+                "type": "datetimepicker",
+                "label": "選擇時間",
+                "data": "hello",
+                "mode": "date"
               }
-            }
-          ]
-        }
-      },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "direction": "ltr",
-        "hero": {
-          "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip12.jpg",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "安排行程",
-              "weight": "bold",
-              "size": "sm"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "wrap": true,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5,
-                      "text": "透過您的偏好來自動化生成行程"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "separator"
             },
             {
               "type": "button",
+              "style": "link",
+              "height": "sm",
               "action": {
                 "type": "message",
-                "label": "開始安排行程",
-                "text": "開始安排行程"
+                "label": "重新選擇",
+                "text": "重新選擇"
               }
             }
+          ],
+          "flex": 0
+        }
+      }, 
+    "Hung" : {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://i.imgur.com/TJJwXQ6.jpg",
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": "http://linecorp.com/"
+          }
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Hung",
+              "weight": "bold",
+              "size": "xl"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "margin": "lg",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "選擇預約時間",
+                      "wrap": true,
+                      "color": "#666666",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
           ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "link",
+              "height": "sm",
+              "action": {
+                "type": "datetimepicker",
+                "label": "選擇時間",
+                "data": "hello",
+                "mode": "date"
+              }
+            },
+            {
+              "type": "button",
+              "style": "link",
+              "height": "sm",
+              "action": {
+                "type": "message",
+                "label": "重新選擇",
+                "text": "重新選擇"
+              }
+            }
+          ],
+          "flex": 0
+        }
+      },
+    "Han" : {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": "http://linecorp.com/"
+          },
+          "url": "https://scontent.ftpe8-2.fna.fbcdn.net/v/t31.18172-8/416725_180697048731223_1392091724_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=de6eea&_nc_ohc=AyZwVQDFT8wAX8StdzC&_nc_ht=scontent.ftpe8-2.fna&oh=fa6eeac9c0558ae69b64d03d619d0af5&oe=61A9C12E"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Han",
+              "weight": "bold",
+              "size": "xl"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "margin": "lg",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "選擇預約時間",
+                      "wrap": true,
+                      "color": "#666666",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "link",
+              "height": "sm",
+              "action": {
+                "type": "datetimepicker",
+                "label": "選擇時間",
+                "data": "hello",
+                "mode": "date"
+              }
+            },
+            {
+              "type": "button",
+              "style": "link",
+              "height": "sm",
+              "action": {
+                "type": "message",
+                "label": "重新選擇",
+                "text": "重新選擇"
+              }
+            }
+          ],
+          "flex": 0
         }
       }
-    ]
-  }
+}

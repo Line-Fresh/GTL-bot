@@ -1,341 +1,341 @@
 {
-    "type": "carousel",
-    "contents": [
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://i.imgur.com/eBa6i9u.jpg",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "Johnson",
-              "weight": "bold",
-              "size": "sm",
-              "wrap": true
-            },
-            {
-              "type": "box",
-              "layout": "baseline",
-              "contents": [
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "text",
-                  "text": "5.0",
-                  "size": "xs",
-                  "color": "#8c8c8c",
-                  "margin": "md",
-                  "flex": 0
-                }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "哈囉~大家好~我是Johnson 喜歡戶外大自然的我~可以讓大家看見完全與眾不同的虎尾喔~讓虎尾的刻板印象完全翻轉!!私房的秘境景點更讓人有流連忘返的回憶~來虎尾記得要找我喔～!!",
-                      "wrap": true,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "separator"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "message",
-                "label": "選擇",
-                "text": "選擇Johnson"
-              },
-              "offsetBottom": "none",
-              "offsetTop": "lg"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "更多",
-                "uri": "http://linecorp.com/"
-              }
-            }
-          ]
-        }
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/eBa6i9u.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
       },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://i.imgur.com/TJJwXQ6.jpg",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "Hung",
-              "weight": "bold",
-              "size": "sm",
-              "wrap": true
-            },
-            {
-              "type": "box",
-              "layout": "baseline",
-              "contents": [
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-                },
-                {
-                  "type": "text",
-                  "text": "4.0",
-                  "size": "sm",
-                  "color": "#8c8c8c",
-                  "margin": "md",
-                  "flex": 0
-                }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": " 各位好, 我是Hung, 居住在虎尾, 歡迎各國旅客來虎尾，我會帶您們走在地人的生活行程及吃在地料理唷~~",
-                      "wrap": true,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "separator"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "message",
-                "label": "選擇",
-                "text": "選擇Hung"
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Johnson",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
               },
-              "offsetTop": "lg"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "更多",
-                "uri": "http://linecorp.com/"
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "5.0",
+                "size": "xs",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
               }
-            }
-          ]
-        }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "哈囉~大家好~我是Johnson 喜歡戶外大自然的我~可以讓大家看見完全與眾不同的虎尾喔~讓虎尾的刻板印象完全翻轉!!私房的秘境景點更讓人有流連忘返的回憶~來虎尾記得要找我喔～!!",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
       },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://scontent.ftpe8-2.fna.fbcdn.net/v/t31.18172-8/416725_180697048731223_1392091724_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=de6eea&_nc_ohc=AyZwVQDFT8wAX8StdzC&_nc_ht=scontent.ftpe8-2.fna&oh=fa6eeac9c0558ae69b64d03d619d0af5&oe=61A9C12E",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "\bHan",
-              "weight": "bold",
-              "size": "sm"
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "separator"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "message",
+              "label": "點擊挑選",
+              "text": "選擇Johnson"
             },
-            {
-              "type": "box",
-              "layout": "baseline",
-              "contents": [
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-                },
-                {
-                  "type": "text",
-                  "text": "4.0",
-                  "size": "sm",
-                  "color": "#8c8c8c",
-                  "margin": "md",
-                  "flex": 0
-                }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "叫我黑色閃電，帶領大家虎尾走透透，上山下海，享受地道美食，更提供行程多種規劃選擇，適時推薦探訪私房景點，讓您的旅遊假期不再是走馬看花，而是一趟充滿活力快樂知性之旅，更適時抓住您快樂的笑容，留下美好的回憶！",
-                      "size": "xs",
-                      "flex": 5,
-                      "color": "#8c8c8c",
-                      "wrap": true
-                    }
-                  ]
-                }
-              ]
+            "offsetBottom": "none",
+            "offsetTop": "lg"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "更多",
+              "uri": "http://linecorp.com/"
             }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "separator"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "message",
-                "label": "選擇",
-                "text": "選擇Han"
-              },
-              "offsetTop": "lg"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "更多",
-                "uri": "http://linecorp.com/"
-              }
-            }
-          ]
-        }
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/TJJwXQ6.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Hung",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "4.0",
+                "size": "sm",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": " 各位好, 我是Hung, 居住在虎尾, 歡迎各國旅客來虎尾，我會帶您們走在地人的生活行程及吃在地料理唷~~",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "separator"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "message",
+              "label": "點擊挑選",
+              "text": "選擇Hung"
+            },
+            "offsetTop": "lg"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "更多",
+              "uri": "http://linecorp.com/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://scontent.ftpe8-2.fna.fbcdn.net/v/t31.18172-8/416725_180697048731223_1392091724_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=de6eea&_nc_ohc=AyZwVQDFT8wAX8StdzC&_nc_ht=scontent.ftpe8-2.fna&oh=fa6eeac9c0558ae69b64d03d619d0af5&oe=61A9C12E",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "\bHan",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "4.0",
+                "size": "sm",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "叫我黑色閃電，帶領大家虎尾走透透，上山下海，享受地道美食，更提供行程多種規劃選擇，適時推薦探訪私房景點，讓您的旅遊假期不再是走馬看花，而是一趟充滿活力快樂知性之旅，更適時抓住您快樂的笑容，留下美好的回憶！",
+                    "size": "xs",
+                    "flex": 5,
+                    "color": "#8c8c8c",
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "separator"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "message",
+              "label": "點擊挑選",
+              "text": "選擇Han"
+            },
+            "offsetTop": "lg"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "更多",
+              "uri": "http://linecorp.com/"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
