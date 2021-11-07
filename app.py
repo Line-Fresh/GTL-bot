@@ -34,14 +34,14 @@ def callback():
 
 def ScheduleHandler(event, profile, msg):
     if msg == "行程表/導遊":
-        FlexMessage = json.load(open('jsonfile/flex.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/schedule/flex.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
     elif msg == "挑選導遊" or msg == "重新選擇":
         print(event.reply_token)
-        FlexMessage = json.load(open('jsonfile/tour.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/schedulte/tour.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
@@ -49,7 +49,7 @@ def ScheduleHandler(event, profile, msg):
     
     elif msg[:2] == "選擇":
         guide = msg[2:]
-        FlexMessage = json.load(open('jsonfile/reservation.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/schedule/reservation.json','r',encoding='utf-8'))
         active_user[event.source.user_id] = {}
         active_user[event.source.user_id]["guide"] = guide
         print(active_user)
@@ -59,7 +59,7 @@ def ScheduleHandler(event, profile, msg):
             )
     elif msg == "預約完成":
         guide = msg[2:]
-        FlexMessage = json.load(open('jsonfile/guide.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/schedule/guide.json','r',encoding='utf-8'))
         FlexMessage[guide]["body"]["contents"][2]["contents"][0]["contents"][1]["text"] = profile.display_name
         line_bot_api.reply_message(
                 event.reply_token,
@@ -76,32 +76,67 @@ def FoodHandler(event, profile):
 
 def SiteHandler(event, profile, msg):
     if msg == "景點介紹/預約":
-        FlexMessage = json.load(open('jsonfile/category.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/site/category.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
     elif msg == "風景":
-        FlexMessage = json.load(open('jsonfile/landscape.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/site/landscape.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
     elif msg == "文化":
-        FlexMessage = json.load(open('jsonfile/culture.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/site/culture.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
     elif msg == "休閒":
-        FlexMessage = json.load(open('jsonfile/leisure.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/site/leisure.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
+
+
+def SocialHandler(event, profile, msg):
+    if msg == "社交":
+        FlexMessage = json.load(open('jsonfile/social/social_opening.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    elif msg == "人文小團體":
+        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    elif msg == "人文大團體":
+        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    elif msg == "自然小團體":
+        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    elif msg == "自然大團體":
+        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    
+
 def GameHandler(event, profile, msg):
     if msg == "遊戲":
-        FlexMessage = json.load(open('jsonfile/games.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/game/games.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
@@ -144,6 +179,8 @@ def messageHandler(event):
         FoodHandler(event, profile)
     elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
         SiteHandler(event, profile, msg)
+    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體":
+        SocialHandler(event, profile, msg)
     elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
         GameHandler(event, profile, msg)
     else:
