@@ -28,7 +28,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "目前人數：3",
+                  "text": "目前人數：3/8",
                   "size": "xs",
                   "color": "#8c8c8c"
                 },
@@ -60,7 +60,7 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://linecorp.com/"
+                "uri": "http://line.me/ti/g/duHaaKnCKy"
               }
             }
           ],
@@ -102,7 +102,7 @@
                 {
                   "type": "text",
                   "color": "#8c8c8c",
-                  "text": "目前人數：4",
+                  "text": "目前人數：4/8",
                   "size": "xs"
                 },
                 {
@@ -133,7 +133,7 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://linecorp.com/"
+                "uri": "http://line.me/ti/g/MVU4R7O5g3"
               }
             }
           ],
@@ -176,7 +176,7 @@
                     {
                       "type": "text",
                       "color": "#8c8c8c",
-                      "text": "目前人數：3",
+                      "text": "目前人數：3/4",
                       "size": "xs"
                     },
                     {
@@ -209,7 +209,7 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://linecorp.com/"
+                "uri": "http://line.me/ti/g/AMuS1nwyp0"
               }
             }
           ],

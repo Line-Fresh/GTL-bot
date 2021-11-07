@@ -54,7 +54,7 @@
         },
         "footer": {
           "type": "box",
-          "layout": "vertical",
+          "layout": "horizontal",
           "contents": [
             {
               "type": "button",
@@ -66,7 +66,7 @@
               "margin": "xs",
               "height": "sm",
               "offsetTop": "none",
-              "offsetBottom": "xs",
+              "offsetBottom": "none",
               "offsetStart": "none",
               "adjustMode": "shrink-to-fit",
               "flex": 1
@@ -86,7 +86,8 @@
             }
           ],
           "spacing": "none",
-          "margin": "none"
+          "margin": "none",
+          "paddingAll": "xs"
         }
       },
       {
@@ -150,7 +151,8 @@
                 "uri": "https://travel.line.me/r/HSnQGmNqHk"
               }
             }
-          ]
+          ],
+          "paddingAll": "xs"
         }
       },
       {
@@ -214,7 +216,8 @@
                 "text": "開始安排行程"
               }
             }
-          ]
+          ],
+          "paddingAll": "xs"
         }
       }
     ]
