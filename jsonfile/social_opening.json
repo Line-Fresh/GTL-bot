@@ -1,0 +1,120 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [
+        {
+          "type": "text",
+          "text": "虎尾社交酷",
+          "weight": "bold",
+          "size": "sm",
+          "color": "#AAAAAA",
+          "contents": []
+        }
+      ]
+    },
+    "hero": {
+      "type": "image",
+      "url": "https://i.ibb.co/bz4881W/Screen-Shot-2021-11-07-at-9-24-24-PM.png",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com/"
+      }
+    },
+    "body": {
+      "type": "box",
+      "layout": "horizontal",
+      "spacing": "md",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "vertical",
+          "flex": 2,
+          "contents": [
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "人文小團體",
+                    "text": "人文小團體"
+                  },
+                  "margin": "none",
+                  "height": "sm"
+                },
+                {
+                  "type": "separator"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "人文大團體",
+                    "text": "人文大團體"
+                  },
+                  "margin": "none",
+                  "height": "sm"
+                }
+              ]
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "自然小團體",
+                    "text": "自然小團體"
+                  },
+                  "margin": "none",
+                  "height": "sm"
+                },
+                {
+                  "type": "separator"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "自然大團體",
+                    "text": "自然大團體"
+                  },
+                  "margin": "none",
+                  "height": "sm"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "horizontal",
+      "paddingAll": "1px",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "加入社群",
+            "uri": "https://line.me/ti/g2/58urDcwiuF09z-PwyEbpu-jWaWU6QrkCdT8usg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+          },
+          "style": "secondary"
+        }
+      ]
+    }
+  }
