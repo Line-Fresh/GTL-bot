@@ -103,11 +103,11 @@
             {
               "type": "button",
               "action": {
-                "type": "message",
+                "type": "uri",
                 "label": "預約",
-                "text": "預約"
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
-              "margin": "none",
+              "margin": "xs",
               "height": "sm"
             }
           ]
@@ -220,12 +220,12 @@
             {
               "type": "button",
               "action": {
-                "type": "message",
+                "type": "uri",
                 "label": "預約",
-                "text": "預約"
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
-              "height": "sm",
-              "margin": "xs"
+              "margin": "xs",
+              "height": "sm"
             }
           ]
         },
@@ -336,12 +336,12 @@
             {
               "type": "button",
               "action": {
-                "type": "message",
+                "type": "uri",
                 "label": "預約",
-                "text": "預約"
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
-              "height": "sm",
-              "margin": "xs"
+              "margin": "xs",
+              "height": "sm"
             }
           ]
         },

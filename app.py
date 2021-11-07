@@ -41,7 +41,7 @@ def ScheduleHandler(event, profile, msg):
             )
     elif msg == "挑選導遊" or msg == "重新選擇":
         print(event.reply_token)
-        FlexMessage = json.load(open('jsonfile/schedulte/tour.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/schedule/tour.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
@@ -195,7 +195,7 @@ def handle_postback(event):
     user_name = line_bot_api.get_profile(uid).display_name
     guide = active_user[uid]["guide"]
     time = active_user[uid]["time"]
-    FlexMessage = json.load(open('jsonfile/guide.json','r',encoding='utf-8'))
+    FlexMessage = json.load(open('jsonfile/schedule/guide.json','r',encoding='utf-8'))
     FlexMessage[guide]["body"]["contents"][2]["contents"][0]["contents"][1]["text"] = user_name
     FlexMessage[guide]["body"]["contents"][2]["contents"][1]["contents"][1]["text"] = time
     line_bot_api.push_message(
