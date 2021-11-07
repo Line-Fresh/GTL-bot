@@ -20,6 +20,8 @@ handler = WebhookHandler(config['line-bot']['channel_secret'])
 
 
 active_user = {} #temprorary database
+travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"]
+
 
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
@@ -66,8 +68,71 @@ def ScheduleHandler(event, profile, msg):
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
             )
-
-
+    elif msg == "開始安排行程":
+        uid = event.source.user_id
+        FlexMessage = json.load(open('jsonfile/schedule/time.json','r',encoding='utf-8'))
+        line_bot_api.push_message(
+            uid, 
+            TextSendMessage(text="預計旅遊時間")
+        )
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg[:6] == "預計旅程時間":
+        uid = event.source.user_id
+        FlexMessage = json.load(open('jsonfile/schedule/transportation.json','r',encoding='utf-8'))
+        line_bot_api.push_message(
+            uid, 
+            TextSendMessage(text="預計交通工具")
+        )
+        active_user[event.source.user_id] = {}
+        active_user[event.source.user_id]["time"] = msg
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            ) 
+    elif msg[:6] == "預計交通工具":
+        uid = event.source.user_id
+        FlexMessage = json.load(open('jsonfile/schedule/type.json','r',encoding='utf-8'))
+        line_bot_api.push_message(
+            uid, 
+            TextSendMessage(text="預計旅行類別")
+        )
+        active_user[event.source.user_id]["transportation"] = msg
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            ) 
+    elif msg[:6] == "預計旅行類別":
+        uid = event.source.user_id
+        FlexMessage = json.load(open('jsonfile/schedule/degree.json','r',encoding='utf-8'))
+        line_bot_api.push_message(
+            uid, 
+            TextSendMessage(text="預計旅行方式")
+        )
+        active_user[event.source.user_id]["type"] = msg
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            ) 
+    elif msg[:6] == "預計旅行方式":
+        
+        active_user[event.source.user_id]["degree"] = msg
+        user = active_user[event.source.user_id]
+        line = "======================="
+        url = None
+        # temprorary, should be modified 
+        if "人文" in user["type"]:
+            url = travel_url[1] 
+        else:
+            url = travel_url[0]
+        url = f'參考行程：{url}'
+        result = f'生成結果\n{line}\n{user["time"]}\n{user["transportation"]}\n{user["type"]}\n{user["degree"]}\n{url}'
+        line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=result)
+            ) 
 def FoodHandler(event, profile):    
     line_bot_api.reply_message(
             event.reply_token,
@@ -134,12 +199,13 @@ def SocialHandler(event, profile, msg):
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "隨機生成":
-        num = random.randint(2, 4)
+        num = random.randint(1, 4)
         FlexMessage = json.load(open(f'jsonfile/social/group{num}.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
+
 def GameHandler(event, profile, msg):
     if msg == "遊戲":
         FlexMessage = json.load(open('jsonfile/game/games.json','r',encoding='utf-8'))
@@ -179,16 +245,16 @@ def GGHandler(event, profile):
 def messageHandler(event):
     msg = event.message.text
     profile = line_bot_api.get_profile(event.source.user_id)
-    if msg == "行程表/導遊" or msg == "挑選導遊" or msg[:2] == "選擇" or msg == "重新選擇": 
+    if msg == "行程表/導遊" or msg == "挑選導遊" or msg[:2] == "選擇" or msg == "重新選擇" or msg == "開始安排行程" or msg[:6] == "預計旅程時間" or msg[:6] == "預計交通工具" or msg[:6] == "預計旅行類別" or msg[:6] == "預計旅行方式":
         ScheduleHandler(event, profile, msg)
     elif msg == "美食":
         FoodHandler(event, profile)
     elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
         SiteHandler(event, profile, msg)
-    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體" or "隨機生成":
-        SocialHandler(event, profile, msg)
     elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
         GameHandler(event, profile, msg)
+    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體" or msg == "隨機生成":
+        SocialHandler(event, profile, msg)
     else:
         GGHandler(event, profile)
 

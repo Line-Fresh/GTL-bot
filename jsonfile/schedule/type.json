@@ -1,0 +1,101 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://www.lookit.tw/upload/Po/Rq3/0cd0ac3df0184c4a813e4fa464577e9d.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "自然",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計旅行類別：自然"
+                },
+                "height": "sm"
+              }
+          ],
+          "spacing": "xs",
+          "margin": "xs",
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://oudo.com/public/uploads/570f1fe58b09e.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "人文"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計旅行類別：人文"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      }
+    ]
+  }

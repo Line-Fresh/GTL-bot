@@ -1,0 +1,147 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://cc.tvbs.com.tw/img/program/upload/2019/03/13/20190313112316-88633aa8.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "步行",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計交通工具：步行"
+                },
+                "height": "sm"
+              }
+          ],
+          "spacing": "xs",
+          "margin": "xs",
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://immay.tw/wp-content/uploads/pixnet/1407825286-421808744.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "腳踏車"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計交通工具：腳踏車"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://www.carstuff.com.tw/media/k2/items/cache/561abf1193874602973a1987df1521ae_XL.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "汽車/摩托車",
+              "weight": "bold",
+              "size": "sm"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計交通工具：汽車/摩托車"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+    }
+    ]
+  }

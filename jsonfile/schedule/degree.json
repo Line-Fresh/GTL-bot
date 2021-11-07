@@ -1,0 +1,101 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://beri.tw/wp-content/uploads/%E8%99%8E%E5%B0%BE%E9%9B%B2%E6%9E%97-2.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "深度旅遊",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計旅行方式：深度旅遊"
+                },
+                "height": "sm"
+              }
+          ],
+          "spacing": "xs",
+          "margin": "xs",
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://icrvb3jy.xinmedia.com/solomo/article/184251/29691068-93F7-4C85-D585-6B914A59AA55.jpeg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "虎尾漫遊"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計旅行方式：虎尾漫遊"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      }
+    ]
+  }
