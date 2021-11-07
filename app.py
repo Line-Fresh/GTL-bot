@@ -4,7 +4,7 @@ import os
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, FlexSendMessage, DatetimePickerAction, QuickReply, QuickReplyButton, PostbackEvent
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, FlexSendMessage, DatetimePickerAction, QuickReply, QuickReplyButton, PostbackEvent, StickerSendMessage
 import configparser
 import json
 import datetime
@@ -66,17 +66,40 @@ def ScheduleHandler(event, profile, msg):
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
             )
+
+
 def FoodHandler(event, profile):    
     line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="Hello " + profile.display_name[1:])
         )
-def SiteHandler(event, profile):
-    line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text="Hello " + profile.display_name[1:])
-        )
 
+
+def SiteHandler(event, profile, msg):
+    if msg == "景點介紹/預約":
+        FlexMessage = json.load(open('jsonfile/category.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg == "風景":
+        FlexMessage = json.load(open('jsonfile/landscape.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg == "文化":
+        FlexMessage = json.load(open('jsonfile/culture.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
+    elif msg == "休閒":
+        FlexMessage = json.load(open('jsonfile/leisure.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            )
 def GameHandler(event, profile):
     line_bot_api.reply_message(
             event.reply_token,
@@ -86,7 +109,10 @@ def GameHandler(event, profile):
 def GGHandler(event, profile):
     line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="You GG")
+            StickerSendMessage(
+                package_id='6362', 
+                sticker_id='11087923'
+            )
         )
 
 
@@ -98,8 +124,8 @@ def messageHandler(event):
         ScheduleHandler(event, profile, msg)
     elif msg == "美食":
         FoodHandler(event, profile)
-    elif msg == "景點介紹/預約":
-        SiteHandler(event, profile)
+    elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
+        SiteHandler(event, profile, msg)
     elif msg == "遊戲":
         GameHandler(event, profile)
     else:

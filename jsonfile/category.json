@@ -1,0 +1,278 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://1.bp.blogspot.com/-hEnzdxkEwSE/X7Tpy2wKg2I/AAAAAAAAFN8/32qMf6eGY3sGZawGfmEtJ5br-GX6vxEFQCLcBGAsYHQ/s0/IMG_6706.jpg",
+              "size": "full",
+              "aspectMode": "cover",
+              "aspectRatio": "2:3",
+              "gravity": "top"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "size": "xl",
+                      "color": "#ffffff",
+                      "weight": "bold",
+                      "text": "風景"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "filler"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://cdn-icons-png.flaticon.com/512/1612/1612855.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "點擊",
+                          "color": "#ffffff",
+                          "flex": 0,
+                          "offsetTop": "-2px",
+                          "action": {
+                            "type": "message",
+                            "label": "風景",
+                            "text": "風景"
+                          }
+                        },
+                        {
+                          "type": "filler"
+                        }
+                      ],
+                      "spacing": "sm"
+                    },
+                    {
+                      "type": "filler"
+                    }
+                  ],
+                  "borderWidth": "1px",
+                  "cornerRadius": "4px",
+                  "spacing": "sm",
+                  "borderColor": "#ffffff",
+                  "margin": "xxl",
+                  "height": "40px"
+                }
+              ],
+              "position": "absolute",
+              "offsetBottom": "0px",
+              "offsetStart": "0px",
+              "offsetEnd": "0px",
+              "backgroundColor": "#03303Acc",
+              "paddingAll": "20px",
+              "paddingTop": "18px"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://i2.wp.com/img.journey.tw/20180408220323_54.jpg?fit=2000%2C1328&quality=100&ssl=1",
+              "size": "full",
+              "aspectMode": "cover",
+              "aspectRatio": "2:3",
+              "gravity": "top"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "文化",
+                      "size": "xl",
+                      "color": "#ffffff",
+                      "weight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "filler"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://cdn-icons-png.flaticon.com/512/1612/1612855.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "點擊",
+                          "color": "#ffffff",
+                          "flex": 0,
+                          "offsetTop": "-2px",
+                          "action": {
+                            "type": "message",
+                            "label": "文化",
+                            "text": "文化"
+                          }
+                        },
+                        {
+                          "type": "filler"
+                        }
+                      ],
+                      "spacing": "sm"
+                    },
+                    {
+                      "type": "filler"
+                    }
+                  ],
+                  "borderWidth": "1px",
+                  "cornerRadius": "4px",
+                  "spacing": "sm",
+                  "borderColor": "#ffffff",
+                  "margin": "xxl",
+                  "height": "40px"
+                }
+              ],
+              "position": "absolute",
+              "offsetBottom": "0px",
+              "offsetStart": "0px",
+              "offsetEnd": "0px",
+              "backgroundColor": "#9C8E7Ecc",
+              "paddingAll": "20px",
+              "paddingTop": "18px"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://img.snowhy.tw/20200304000737_30.jpg",
+              "size": "full",
+              "aspectMode": "cover",
+              "aspectRatio": "2:3",
+              "gravity": "top"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "size": "xl",
+                      "color": "#ffffff",
+                      "weight": "bold",
+                      "text": "休閒"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "filler"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://cdn-icons-png.flaticon.com/512/1612/1612855.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "點擊",
+                          "color": "#ffffff",
+                          "flex": 0,
+                          "offsetTop": "-2px",
+                          "action": {
+                            "type": "message",
+                            "label": "休閒",
+                            "text": "休閒"
+                          }
+                        },
+                        {
+                          "type": "filler"
+                        }
+                      ],
+                      "spacing": "sm"
+                    },
+                    {
+                      "type": "filler"
+                    }
+                  ],
+                  "borderWidth": "1px",
+                  "cornerRadius": "4px",
+                  "spacing": "sm",
+                  "borderColor": "#ffffff",
+                  "margin": "xxl",
+                  "height": "40px"
+                }
+              ],
+              "position": "absolute",
+              "offsetBottom": "0px",
+              "offsetStart": "0px",
+              "offsetEnd": "0px",
+              "backgroundColor": "#03303Acc",
+              "paddingAll": "20px",
+              "paddingTop": "18px"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      }
+    ]
+  }
