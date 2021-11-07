@@ -21,7 +21,7 @@ handler = WebhookHandler(config['line-bot']['channel_secret'])
 
 active_user = {} #temprorary database
 travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"]
-
+appear = [False]*5
 
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
@@ -199,7 +199,10 @@ def SocialHandler(event, profile, msg):
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "隨機生成":
-        num = random.randint(1, 4)
+        num = random.randint(2, 4)
+        while appear[num]:
+            num = random.randint(2, 4)
+        appear[num] = True
         FlexMessage = json.load(open(f'jsonfile/social/group{num}.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
@@ -249,7 +252,7 @@ def messageHandler(event):
         ScheduleHandler(event, profile, msg)
     elif msg == "美食":
         FoodHandler(event, profile)
-    elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
+    elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景" or msg[:4] == "預約成功": 
         SiteHandler(event, profile, msg)
     elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
         GameHandler(event, profile, msg)
