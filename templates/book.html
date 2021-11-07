@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/book.css') }}">
+</head>
+<body>
+    <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="visitor_name" placeholder="Johnson Hung" required>
+    </div>
+    <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input type="email" id="email" name="visitor_email" placeholder="Johnsonhung09216@gmail.com" required>
+    </div>
+    <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="0912345678") required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+        <label for="adult">Adults</label>
+        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="child">Children</label>
+        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+    </div>
+    <div class="elem-group">
+        <label for="room-selection">Select Room Preference</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="connecting">Connecting</option>
+            <option value="adjoining">Adjoining</option>
+            <option value="adjacent">Adjacent</option>
+        </select>
+    </div>
+    <hr>
+    
+    <button type="submit" id="submit-btn">Book The Rooms</button>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+
+        function initializeLiff(myLiffId) {
+            liff
+            .init({
+                liffId: myLiffId,
+            })
+            .then(() => {
+                console.log("liff init success!")
+            })
+            .catch((err) => {
+                alert(`error: ${JSON.stringify(err)}`);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeLiff('{{ liffid }}')
+            const btn = document.getElementById("submit-btn");
+            btn.addEventListener("click", () =>{
+                const title = "預約資訊"
+                const line = "================="
+                const name = "預約者：" + document.getElementById("name").value;
+                const email = "信箱：" + document.getElementById("email").value;
+                const phone = "電話：" + document.getElementById("phone").value;
+                const adultnum = "成人人數：" + document.getElementById("adult").value;
+                const childnum = "小孩人數：" + document.getElementById("child").value;
+                const checkin = "入住時間：" + document.getElementById("checkin-date").value;
+                const checkout = "退房時間：" + document.getElementById("checkout-date").value;
+                const room = "房間類型：" + document.getElementById("room-selection").value;
+                const output = `${title}\n${line}\n${name}\n${email}\n${phone}\n${adultnum}\n${childnum}\n${checkin}\n${checkout}\n${room}`
+                liff.sendMessages([{
+                    type : 'text',
+                    text : output
+                }
+                ]).then(() => { 
+                    liff.closeWindow();
+                }).catch((err) => {
+                    alert("Something bad happended qq")
+                })       
+            })
+
+        })  
+
+
+    </script>
+</body>
+</html>
