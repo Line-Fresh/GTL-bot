@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>社交開群</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/book.css') }}">
+</head>
+<body style="font-family: sans-serif">
+    <div class="elem-group">
+        <label for="name">你的名子</label>
+        <input type="text" id="name" name="name" placeholder="Johnson Hung" required>
+    </div>
+    <div class="elem-group">
+        <label for="lineid">你的Line ID</label>
+        <input type="text" id="lineid" name="line id" placeholder="" required>
+    </div>
+    <div class="elem-group">
+        <label for="link">Line群組連結</label>
+        <input type="text" id="link" name="visitor_phone" placeholder="") required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+        <label for="room-selection">旅遊種類</label>
+        <select id="room-selection" name="travel_preference" required>
+            <option value="">Choose a Category</option>
+            <option value="nature">自然</option>
+            <option value="culture">人文</option>
+        </select>
+    </div>
+    <div class="elem-group inlined">
+        <label for="people-selection">旅遊人數</label>
+        <select id="people-selection" name="people_preference" required>
+            <option value="">Choose a Category</option>
+            <option value="small-group">小團體(2-4人)</option>
+            <option value="large-group">大團體(4-8人)</option>
+        </select>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkin-date">開始時間</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout-date">結束時間</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+    </div>
+    <hr>
+    
+    <button type="submit" id="submit-btn">新增旅遊群組</button>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+
+        function initializeLiff(myLiffId) {
+            liff
+            .init({
+                liffId: myLiffId,
+            })
+            .then(() => {
+                console.log("liff init success!")
+            })
+            .catch((err) => {
+                alert(`error: ${JSON.stringify(err)}`);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeLiff('{{ liffid }}')
+            const btn = document.getElementById("submit-btn");
+            btn.addEventListener("click", () =>{
+                const title = "社交旅遊資訊"
+                const line = "================="
+                const name = "開群者：" + document.getElementById("name").value;
+                const phone = "Line ID：" + document.getElementById("lineid").value;
+                const adultnum = "群組link：" + document.getElementById("link").value;
+                const checkin = "開始日期：" + document.getElementById("checkin-date").value;
+                const checkout = "結束日期：" + document.getElementById("checkout-date").value;
+                const output = `${title}\n${line}\n${name}\n${email}\n${phone}\n${adultnum}\n${childnum}\n${checkin}\n${checkout}\n${room}`
+                liff.sendMessages([{
+                    type : 'text',
+                    text : output
+                }
+                ]).then(() => { 
+                    liff.closeWindow();
+                }).catch((err) => {
+                    alert("Something bad happended qq")
+                })       
+            })
+
+        })  
+    </script>
+</body>
+</html>
