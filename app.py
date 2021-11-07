@@ -110,7 +110,7 @@ def SocialHandler(event, profile, msg):
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "人文小團體":
-        FlexMessage = json.load(open('jsonfile/social/group3.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
