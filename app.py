@@ -11,7 +11,6 @@ import datetime
 app = Flask(__name__)
 
 
-
 # LINE BOT INFORMATION
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -100,10 +99,29 @@ def SiteHandler(event, profile, msg):
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             )
-def GameHandler(event, profile):
-    line_bot_api.reply_message(
+def GameHandler(event, profile, msg):
+    if msg == "遊戲":
+        FlexMessage = json.load(open('jsonfile/games.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="Hello " + profile.display_name[1:])
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
+    # should have a db to save the details of the game
+    elif msg == "闖關遊戲":
+        f = open("./textfile/normal_game.txt", "r")
+        message = f.read()
+        f.close()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=message)
+        )
+    elif msg[:4] == "即時競賽":
+        f = open("./textfile/special_game/train.txt", "r")
+        message = f.read()
+        f.close()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=message)
         )
 
 def GGHandler(event, profile):
@@ -126,8 +144,8 @@ def messageHandler(event):
         FoodHandler(event, profile)
     elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
         SiteHandler(event, profile, msg)
-    elif msg == "遊戲":
-        GameHandler(event, profile)
+    elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
+        GameHandler(event, profile, msg)
     else:
         GGHandler(event, profile)
 

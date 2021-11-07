@@ -1,0 +1,275 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "url": "https://storage.googleapis.com/smiletaiwan-cms-cwg-tw/article/201805/article-5b0531d93f211.jpg",
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "label": "Line",
+            "uri": "https://linecorp.com/"
+          }
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "闖關遊戲",
+              "weight": "bold",
+              "size": "xl",
+              "contents": []
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "margin": "lg",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "活動",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "常駐闖關遊戲",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "時間",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "全天",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "獎勵",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "完成相對應得關數能夠得到xxx",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "contents": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "flex": 0,
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "詳細資訊",
+                "text": "闖關遊戲"
+              },
+              "height": "sm",
+              "style": "link"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "開始遊戲",
+                "uri": "https://liff.line.me/1656606824-WPl5Zd6n"
+              },
+              "height": "sm",
+              "style": "link"
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "url": "https://f.share.photo.xuite.net/siba39/1fe1789/5414676/208109685_l.jpg",
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "label": "Line",
+            "uri": "https://linecorp.com/"
+          }
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "即時競賽",
+              "weight": "bold",
+              "size": "xl",
+              "contents": []
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "margin": "lg",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "活動",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "春遊虎尾－鐵道市集",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "時間",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "1/21 10:00-1/23 23:00",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "獎勵",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 1,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "前三名可以得到限量鐵道虎",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "contents": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "flex": 0,
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "詳細資訊",
+                "text": "即時競賽(春遊虎尾－鐵道市集)"
+              },
+              "height": "sm",
+              "style": "link"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "開始遊戲",
+                "uri": "https://liff.line.me/1656606824-WPl5Zd6n"
+              },
+              "height": "sm",
+              "style": "link"
+            }
+          ]
+        }
+      }
+    ]
+  }
