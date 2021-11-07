@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/book.css') }}">
 </head>
 <body>
-    <form action="reservation.php" method="post">
     <div class="elem-group">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="visitor_name" placeholder="Johnson Hung" required>
@@ -17,7 +16,7 @@
     </div>
     <div class="elem-group">
         <label for="phone">Your Phone</label>
-        <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="0912345678") required>
     </div>
     <hr>
     <div class="elem-group inlined">
@@ -47,8 +46,7 @@
     </div>
     <hr>
     
-    <button type="submit">Book The Rooms</button>
-    </form>
+    <button type="submit" id="submit-btn">Book The Rooms</button>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
 
@@ -65,6 +63,33 @@
             });
         }
 
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeLiff('{{ liffid }}')
+            const btn = document.getElementById("submit-btn");
+            btn.addEventListener("click", () =>{
+                const title = "預約資訊"
+                const line = "================="
+                const name = "預約者：" + document.getElementById("name").value;
+                const email = "信箱：" + document.getElementById("email").value;
+                const phone = "電話：" + document.getElementById("phone").value;
+                const adultnum = "成人人數：" + document.getElementById("adult").value;
+                const childnum = "小孩人數：" + document.getElementById("child").value;
+                const checkin = "入住時間：" + document.getElementById("checkin-date").value;
+                const checkout = "退房時間：" + document.getElementById("checkout-date").value;
+                const room = "房間類型：" + document.getElementById("room-selection").value;
+                const output = `${title}\n${line}\n${name}\n${email}\n${phone}\n${adultnum}\n${childnum}\n${checkin}\n${checkout}\n${room}`
+                liff.sendMessages([{
+                    type : 'text',
+                    text : output
+                }
+                ]).then(() => { 
+                    liff.closeWindow();
+                }).catch((err) => {
+                    alert("Something bad happended qq")
+                })       
+            })
+
+        })  
 
 
     </script>
