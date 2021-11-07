@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/book.css') }}">
+</head>
+<body>
+    <form action="reservation.php" method="post">
+    <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="visitor_name" placeholder="Johnson Hung" required>
+    </div>
+    <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input type="email" id="email" name="visitor_email" placeholder="Johnsonhung09216@gmail.com" required>
+    </div>
+    <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+        <label for="adult">Adults</label>
+        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="child">Children</label>
+        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+    </div>
+    <div class="elem-group">
+        <label for="room-selection">Select Room Preference</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="connecting">Connecting</option>
+            <option value="adjoining">Adjoining</option>
+            <option value="adjacent">Adjacent</option>
+        </select>
+    </div>
+    <hr>
+    
+    <button type="submit">Book The Rooms</button>
+    </form>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+
+        function initializeLiff(myLiffId) {
+            liff
+            .init({
+                liffId: myLiffId,
+            })
+            .then(() => {
+                console.log("liff init success!")
+            })
+            .catch((err) => {
+                alert(`error: ${JSON.stringify(err)}`);
+            });
+        }
+
+
+
+    </script>
+</body>
+</html>

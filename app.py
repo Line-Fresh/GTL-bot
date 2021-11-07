@@ -1,7 +1,7 @@
 # import needed module
 from __future__ import unicode_literals
 import os
-from flask import Flask, request, abort
+from flask import Flask, request, abort, render_template
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, FlexSendMessage, DatetimePickerAction, QuickReply, QuickReplyButton, PostbackEvent, StickerSendMessage
@@ -151,6 +151,11 @@ def handle_postback(event):
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
         )
+
+@app.route('/book')
+def book():
+    return render_template("book.html", liffid=config['line-bot']['liffid'])
+
     
 if __name__ == "__main__":
     app.run()
