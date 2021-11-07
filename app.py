@@ -7,6 +7,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, FlexSendMessage, DatetimePickerAction, QuickReply, QuickReplyButton, PostbackEvent, StickerSendMessage
 import configparser
 import json
+import random
 import datetime
 app = Flask(__name__)
 
@@ -109,31 +110,36 @@ def SocialHandler(event, profile, msg):
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "人文小團體":
-        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/social/group3.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "人文大團體":
-        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "自然小團體":
-        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
     elif msg == "自然大團體":
-        FlexMessage = json.load(open('jsonfile/social/group.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    
-
+    elif msg == "隨機生成":
+        num = random.randint(2, 4)
+        FlexMessage = json.load(open(f'jsonfile/social/group{num}.json','r',encoding='utf-8'))
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+        )
 def GameHandler(event, profile, msg):
     if msg == "遊戲":
         FlexMessage = json.load(open('jsonfile/game/games.json','r',encoding='utf-8'))
@@ -179,7 +185,7 @@ def messageHandler(event):
         FoodHandler(event, profile)
     elif msg == "景點介紹/預約" or msg == "休閒" or msg == "文化" or msg == "風景": 
         SiteHandler(event, profile, msg)
-    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體":
+    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體" or "隨機生成":
         SocialHandler(event, profile, msg)
     elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
         GameHandler(event, profile, msg)
@@ -209,7 +215,12 @@ def handle_postback(event):
 
 @app.route('/book')
 def book():
-    return render_template("book.html", liffid=config['line-bot']['liffid'])
+    return render_template("book.html", liffid=config['line-bot']['book_liffid'])
+
+
+@app.route('/social')
+def social():
+    return render_template("social.html", liffid=config['line-bot']['social_liffid'])
 
     
 if __name__ == "__main__":

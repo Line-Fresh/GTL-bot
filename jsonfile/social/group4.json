@@ -6,7 +6,7 @@
         "size": "kilo",
         "hero": {
           "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+          "url": "https://pws.niu.edu.tw/~hcchiu/images/alishen/80630042.jpg",
           "size": "full",
           "aspectMode": "cover",
           "aspectRatio": "320:213"
@@ -17,7 +17,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "虎尾玩透透",
+              "text": "綺姐帶你玩",
               "weight": "bold",
               "size": "sm",
               "wrap": true
@@ -28,7 +28,7 @@
               "contents": [
                 {
                   "type": "text",
-                  "text": "目前人數：3/8",
+                  "text": "目前人數：3",
                   "size": "xs",
                   "color": "#8c8c8c"
                 },
@@ -60,7 +60,7 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://line.me/ti/g/duHaaKnCKy"
+                "uri": "http://linecorp.com/"
               }
             }
           ],
@@ -79,7 +79,7 @@
         "size": "kilo",
         "hero": {
           "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip11.jpg",
+          "url": "https://www.10wallpaper.com/wallpaper/1366x768/1605/Mountain_sky_lake_grass-Scenery_Photo_HD_Wallpaper_1366x768.jpg",
           "size": "full",
           "aspectMode": "cover",
           "aspectRatio": "320:213"
@@ -93,7 +93,7 @@
               "weight": "bold",
               "size": "sm",
               "wrap": true,
-              "text": "虎頭蛇尾"
+              "text": "崔姊玩虎尾"
             },
             {
               "type": "box",
@@ -102,7 +102,7 @@
                 {
                   "type": "text",
                   "color": "#8c8c8c",
-                  "text": "目前人數：4/8",
+                  "text": "目前人數：4",
                   "size": "xs"
                 },
                 {
@@ -133,7 +133,7 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://line.me/ti/g/MVU4R7O5g3"
+                "uri": "http://linecorp.com/"
               }
             }
           ],
@@ -150,7 +150,7 @@
         "size": "kilo",
         "hero": {
           "type": "image",
-          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip12.jpg",
+          "url": "https://img.ruten.com.tw/s2/8/1e/38/22034186447416_409.jpg",
           "size": "full",
           "aspectMode": "cover",
           "aspectRatio": "320:213"
@@ -161,7 +161,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "虎爛貓",
+              "text": "瑄姐玩虎尾",
               "weight": "bold",
               "size": "sm"
             },
@@ -176,7 +176,7 @@
                     {
                       "type": "text",
                       "color": "#8c8c8c",
-                      "text": "目前人數：3/4",
+                      "text": "目前人數：3",
                       "size": "xs"
                     },
                     {
@@ -209,7 +209,84 @@
               "action": {
                 "type": "uri",
                 "label": "選擇",
-                "uri": "http://line.me/ti/g/AMuS1nwyp0"
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://img.ltn.com.tw/Upload/news/600/2016/12/07/phpkcqmRr.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "更多操作",
+              "weight": "bold",
+              "size": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "color": "#8c8c8c",
+                      "text": "隨機生成：生成更多群組",
+                      "size": "xs"
+                    },
+                    {
+                      "type": "text",
+                      "text": "創建新群組：自己創立一個新的群組",
+                      "color": "#8c8c8c",
+                      "size": "xs"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "隨機生成",
+                "text": "隨機生成"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "創建新群組",
+                "uri": "https://liff.line.me/1656606824-qdOev6z7"
               }
             }
           ],

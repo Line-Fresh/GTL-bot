@@ -6,7 +6,7 @@
 </head>
 <body style="font-family: sans-serif">
     <div class="elem-group">
-        <label for="name">你的名子</label>
+        <label for="name">你的名字</label>
         <input type="text" id="name" name="name" placeholder="Johnson Hung" required>
     </div>
     <div class="elem-group">
@@ -72,7 +72,7 @@
                 const adultnum = "群組link：" + document.getElementById("link").value;
                 const checkin = "開始日期：" + document.getElementById("checkin-date").value;
                 const checkout = "結束日期：" + document.getElementById("checkout-date").value;
-                const output = `${title}\n${line}\n${name}\n${email}\n${phone}\n${adultnum}\n${childnum}\n${checkin}\n${checkout}\n${room}`
+                const output = `${title}\n${line}\n${name}\n${phone}\n${adultnum}\n${checkin}\n${checkout}\n`
                 liff.sendMessages([{
                     type : 'text',
                     text : output

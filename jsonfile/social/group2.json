@@ -1,0 +1,302 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://i0.zi.org.tw/kocpc/2021/01/1611477294-5830d062501eb5a2b777dade755489e2.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "虎尾喝剩",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "目前人數：4",
+                  "size": "xs",
+                  "color": "#8c8c8c"
+                },
+                {
+                  "type": "text",
+                  "text": "時間：12/13-12/14",
+                  "color": "#8c8c8c",
+                  "size": "xs"
+                },
+                {
+                  "type": "text",
+                  "text": "簡介：我們這團想去體驗虎尾的工藝美，預計會去探訪毛巾等景點。",
+                  "color": "#8c8c8c",
+                  "size": "xs",
+                  "wrap": true
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "選擇",
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ],
+          "spacing": "xs",
+          "margin": "xs",
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://images.twgreatdaily.com/images/elastic/Ies/Iesm22wBJleJMoPMyyLZ.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "虎大了"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "color": "#8c8c8c",
+                  "text": "目前人數：4",
+                  "size": "xs"
+                },
+                {
+                  "type": "text",
+                  "text": "時間：12/09",
+                  "color": "#8c8c8c",
+                  "size": "xs"
+                },
+                {
+                  "type": "text",
+                  "text": "簡介：我們打算去森林館等風景行程，有興趣的可以加入喔！",
+                  "color": "#8c8c8c",
+                  "size": "xs",
+                  "wrap": true
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "選擇",
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://2.share.photo.xuite.net/qaz88868/12b766c/6072137/244738083_l.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "九尾",
+              "weight": "bold",
+              "size": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "color": "#8c8c8c",
+                      "text": "目前人數：3",
+                      "size": "xs"
+                    },
+                    {
+                      "type": "text",
+                      "text": "時間：12/10-12/11",
+                      "color": "#8c8c8c",
+                      "size": "xs"
+                    },
+                    {
+                      "type": "text",
+                      "text": "簡介：我們打算去故事館等文化行程，歡迎加入！",
+                      "color": "#8c8c8c",
+                      "size": "xs",
+                      "wrap": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "選擇",
+                "uri": "http://linecorp.com/"
+              }
+            }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "kilo",
+        "hero": {
+          "type": "image",
+          "url": "https://img.ltn.com.tw/Upload/news/600/2016/12/07/phpkcqmRr.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "更多操作",
+              "weight": "bold",
+              "size": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "color": "#8c8c8c",
+                      "text": "隨機生成：生成更多群組",
+                      "size": "xs"
+                    },
+                    {
+                      "type": "text",
+                      "text": "創建新群組：自己創立一個新的群組",
+                      "color": "#8c8c8c",
+                      "size": "xs"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "隨機生成",
+                "text": "隨機生成"
+              }
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "創建新群組",
+                "uri": "https://liff.line.me/1656606824-qdOev6z7"
+              }
+            }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      }
+    ]
+  }
