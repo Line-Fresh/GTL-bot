@@ -53,7 +53,7 @@ def ScheduleHandler(event, profile, msg):
     elif msg[:2] == "選擇":
         guide = msg[2:]
         FlexMessage = json.load(open('jsonfile/schedule/reservation.json','r',encoding='utf-8'))
-        active_user[event.source.user_id] = {}
+        active_user[event.source.user_id] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
         active_user[event.source.user_id]["guide"] = guide
         print(active_user)
         line_bot_api.reply_message(
@@ -86,7 +86,6 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計交通工具")
         )
-        active_user[event.source.user_id] = {}
         active_user[event.source.user_id]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -99,8 +98,6 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
-        if not active_user:
-            active_user[uid] = {}
         active_user[event.source.user_id]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -113,8 +110,6 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
-        if not active_user:
-            active_user[uid] = {}
         active_user[event.source.user_id]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
