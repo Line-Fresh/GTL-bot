@@ -20,8 +20,8 @@ handler = WebhookHandler(config['line-bot']['channel_secret'])
 
 
 active_user = {} #temprorary database
-travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"]
-appear = [False]*5
+travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"] #line travel url
+appear = [False]*5 # for random 
 
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
