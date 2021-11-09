@@ -99,6 +99,8 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
+        if not active_user:
+            active_user[uid] = {}
         active_user[event.source.user_id]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -111,6 +113,8 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
+        if not active_user:
+            active_user[uid] = {}
         active_user[event.source.user_id]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
