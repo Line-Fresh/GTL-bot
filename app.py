@@ -37,7 +37,7 @@ def bugfixer(uid):
             active_user[uid]["type"] = None
         if "degree" not in active_user[uid]:
             active_user[uid]["degree"] = None
-
+    return active_user
 
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
@@ -104,7 +104,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計交通工具")
         )
-        bugfixer(uid)
+        active_user = bugfixer(uid)
         active_user[uid]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -117,7 +117,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
-        bugfixer(uid)
+        active_user = bugfixer(uid)
         active_user[uid]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -130,7 +130,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
-        bugfixer(uid)
+        active_user = bugfixer(uid)
         active_user[uid]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -138,16 +138,16 @@ def ScheduleHandler(event, profile, msg):
             ) 
     elif msg[:6] == "預計旅行方式":
         uid = event.source.user_id
-        bugfixer(uid)
+        active_user = bugfixer(uid)
         active_user[uid]["degree"] = msg
         user = active_user[uid]
         line = "======================="
-        url = None
+        url = travel_url[random.randint(0, 1)]
         # temprorary, should be modified 
-        if "人文" in user["type"]:
-            url = travel_url[1] 
-        else:
-            url = travel_url[0]
+        # if "人文" in user["type"]:
+        #     url = travel_url[1] 
+        # else:
+        #     url = travel_url[0]
         url = f'參考行程：{url}'
         result = f'生成結果\n{line}\n{user["time"]}\n{user["transportation"]}\n{user["type"]}\n{user["degree"]}\n{url}'
         line_bot_api.reply_message(
