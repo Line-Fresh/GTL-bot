@@ -37,8 +37,7 @@ def bugfixer(uid):
             active_user[uid]["type"] = None
         if "degree" not in active_user[uid]:
             active_user[uid]["degree"] = None
-    return active_user
-
+    return
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -70,9 +69,8 @@ def ScheduleHandler(event, profile, msg):
         uid = event.source.user_id
         guide = msg[2:]
         FlexMessage = json.load(open('jsonfile/schedule/reservation.json','r',encoding='utf-8'))
-        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         active_user[uid]["guide"] = guide
-        print(active_user)
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
@@ -104,7 +102,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計交通工具")
         )
-        active_user = bugfixer(uid)
+        bugfixer(uid)
         active_user[uid]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -117,7 +115,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
-        active_user = bugfixer(uid)
+        bugfixer(uid)
         active_user[uid]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -130,7 +128,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
-        active_user = bugfixer(uid)
+        bugfixer(uid)
         active_user[uid]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -138,7 +136,7 @@ def ScheduleHandler(event, profile, msg):
             ) 
     elif msg[:6] == "預計旅行方式":
         uid = event.source.user_id
-        active_user = bugfixer(uid)
+        bugfixer(uid)
         active_user[uid]["degree"] = msg
         user = active_user[uid]
         line = "======================="
@@ -286,6 +284,7 @@ def messageHandler(event):
 @handler.add(PostbackEvent)
 def handle_postback(event):
     uid = event.source.user_id
+    bugfixer(uid)
     active_user[uid]["time"] = event.postback.params['date']
 
     user_name = line_bot_api.get_profile(uid).display_name
