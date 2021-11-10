@@ -23,6 +23,22 @@ active_user = {} #temprorary database
 travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"] #line travel url
 appear = [False]*5 # for random 
 
+def bugfixer(uid):
+    if uid not in active_user:
+        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+    else:
+        if "guide" not in active_user[uid]:
+            active_user[uid]["guide"] = None
+        if "time" not in active_user[uid]:
+            active_user[uid]["time"] = None
+        if "transportation" not in active_user[uid]:
+            active_user[uid]["transportation"] = None
+        if "type" not in active_user[uid]:
+            active_user[uid]["type"] = None
+        if "degree" not in active_user[uid]:
+            active_user[uid]["degree"] = None
+
+
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -88,8 +104,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計交通工具")
         )
-        if uid not in active_user:
-            active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         active_user[uid]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -102,8 +117,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
-        if uid not in active_user:
-            active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         active_user[uid]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -116,8 +130,7 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
-        if uid not in active_user:
-            active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         active_user[uid]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
@@ -125,8 +138,7 @@ def ScheduleHandler(event, profile, msg):
             ) 
     elif msg[:6] == "預計旅行方式":
         uid = event.source.user_id
-        if uid not in active_user:
-            active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         active_user[uid]["degree"] = msg
         user = active_user[uid]
         line = "======================="
