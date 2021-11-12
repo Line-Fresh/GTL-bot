@@ -96,6 +96,53 @@
             "separator": true
           }
         }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://image-wallpaper.com/img/5/267/wZwpmL4ADMtkGbpR2bh9CNy8iNwkTMwIzLlJHct9SaopXai9yZtl2Lt92Yuk3azZXaucWbp9yL6MHc0RHa.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "全選"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "預計旅行類別：全選"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
       }
     ]
   }
