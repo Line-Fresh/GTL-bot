@@ -174,25 +174,25 @@ def SocialHandler(event, profile, msg):
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "人文小團體":
+    elif msg == "美食":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "人文大團體":
+    elif msg == "遊戲":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "自然小團體":
+    elif msg == "寵物":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "自然大團體":
+    elif msg == "事業":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
