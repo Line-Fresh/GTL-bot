@@ -108,7 +108,7 @@
             "action": {
               "type": "uri",
               "label": "更多",
-              "uri": "http://linecorp.com/"
+              "uri": "https://line-fresh.github.io/GTL-LIFF-guide/"
             }
           }
         ]
@@ -220,7 +220,7 @@
             "action": {
               "type": "uri",
               "label": "更多",
-              "uri": "http://linecorp.com/"
+              "uri": "https://line-fresh.github.io/GTL-LIFF-guide/"
             }
           }
         ]
@@ -331,7 +331,7 @@
             "action": {
               "type": "uri",
               "label": "更多",
-              "uri": "http://linecorp.com/"
+              "uri": "https://line-fresh.github.io/GTL-LIFF-guide/"
             }
           }
         ]
