@@ -25,18 +25,18 @@ appear = [False]*5 # for random
 
 def bugfixer(uid):
     if uid not in active_user:
-        active_user[uid] = {"guide" : "Johnson", "time" : "3小時", "transportation" : "步行", "type" : "自然", "degree" : "虎尾輕旅行"}
+        active_user[uid] = {"guide" : "Johnson", "time" : "預計旅遊時間：3小時", "transportation" : "預計交通工具：步行", "type" : "預計旅行類別：自然", "degree" : "預計旅行方式：虎尾輕旅行"}
     else:
         if "guide" not in active_user[uid]:
             active_user[uid]["guide"] = "Johnson"
         if "time" not in active_user[uid]:
-            active_user[uid]["time"] = "3小時"
+            active_user[uid]["time"] = "預計旅遊時間：3小時"
         if "transportation" not in active_user[uid]:
-            active_user[uid]["transportation"] = "步行"
+            active_user[uid]["transportation"] = "預計交通工具：步行"
         if "type" not in active_user[uid]:
-            active_user[uid]["type"] = "自然"
+            active_user[uid]["type"] = "預計旅行類別：自然"
         if "degree" not in active_user[uid]:
-            active_user[uid]["degree"] = "虎尾輕旅行"
+            active_user[uid]["degree"] = "預計旅行方式：虎尾輕旅行"
     return
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])

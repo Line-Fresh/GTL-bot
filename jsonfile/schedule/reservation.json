@@ -67,7 +67,7 @@
           "flex": 0
         }
       }, 
-    "Hung" : {
+    "Emily" : {
         "type": "bubble",
         "size": "kilo",
         "body": {
@@ -76,7 +76,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "Hung",
+              "text": "Emily",
               "weight": "bold",
               "size": "xl"
             },
@@ -135,7 +135,7 @@
           "flex": 0
         }
       },
-    "Han" : {
+    "Melody" : {
         "type": "bubble",
         "size": "kilo",
         "body": {
@@ -144,7 +144,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "Han",
+              "text": "Melody",
               "weight": "bold",
               "size": "xl"
             },

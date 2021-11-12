@@ -72,7 +72,7 @@
                 "contents": [
                   {
                     "type": "text",
-                    "text": "哈囉~大家好~我是Johnson 喜歡戶外大自然的我~可以帶大家認識虎尾美麗的景色，喜歡大自然的人記得來找我玩喔!!",
+                    "text": "哈囉~大家好~我是Johnson，我是在地的虎尾人，所以十分熟悉在地的歷史文化，對虎尾虎尾文化有興趣的人歡迎來找我喔！！",
                     "wrap": true,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -130,7 +130,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Hung",
+            "text": "Emily",
             "weight": "bold",
             "size": "sm",
             "wrap": true
@@ -185,7 +185,7 @@
                 "contents": [
                   {
                     "type": "text",
-                    "text": " 各位好, 我是Hung, 居住在虎尾, 歡迎各位來與我一同體驗虎尾的美好文化，從故事館到布袋戲館，身為本地人的我一定能讓您更加的認識虎尾～～",
+                    "text": "各位好, 我是Emily，喜歡戶外大自然的我，可以帶你們遊遍虎尾的各式風景，且我很擅長拍美麗的網美照，想拍出美美照片的歡迎來找我喔！！",
                     "wrap": true,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -211,7 +211,7 @@
             "action": {
               "type": "message",
               "label": "點擊挑選",
-              "text": "選擇Hung"
+              "text": "選擇Emily"
             },
             "offsetTop": "lg"
           },
@@ -242,7 +242,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "\bHan",
+            "text": "Melody",
             "weight": "bold",
             "size": "sm"
           },
@@ -296,7 +296,7 @@
                 "contents": [
                   {
                     "type": "text",
-                    "text": "叫我黑色閃電，帶領大家虎尾走透透，上山下海，享受地道美食，更提供行程多種規劃選擇，適時推薦探訪私房景點，讓您的旅遊假期不再是走馬看花，而是一趟充滿活力快樂知性之旅，更適時抓住您快樂的笑容，留下美好的回憶！",
+                    "text": "大家好，我是Melody，熱愛人文的我，可以帶你們認識虎尾的歷史風貌，我精通英文跟日文，歡迎國外的朋友來找我玩喔！！",
                     "size": "xs",
                     "flex": 5,
                     "color": "#8c8c8c",
@@ -322,7 +322,7 @@
             "action": {
               "type": "message",
               "label": "點擊挑選",
-              "text": "選擇Han"
+              "text": "選擇Melody"
             },
             "offsetTop": "lg"
           },
