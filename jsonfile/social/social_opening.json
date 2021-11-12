@@ -44,8 +44,8 @@
                   "type": "button",
                   "action": {
                     "type": "message",
-                    "label": "人文小團體",
-                    "text": "人文小團體"
+                    "label": "美食",
+                    "text": "美食"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -57,8 +57,8 @@
                   "type": "button",
                   "action": {
                     "type": "message",
-                    "label": "人文大團體",
-                    "text": "人文大團體"
+                    "label": "遊戲",
+                    "text": "遊戲"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -76,8 +76,8 @@
                   "type": "button",
                   "action": {
                     "type": "message",
-                    "label": "自然小團體",
-                    "text": "自然小團體"
+                    "label": "寵物",
+                    "text": "寵物"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -89,8 +89,8 @@
                   "type": "button",
                   "action": {
                     "type": "message",
-                    "label": "自然大團體",
-                    "text": "自然大團體"
+                    "label": "事業",
+                    "text": "事業"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -110,7 +110,7 @@
           "type": "button",
           "action": {
             "type": "uri",
-            "label": "加入社群",
+            "label": "加入官方社群",
             "uri": "https://line.me/ti/g2/58urDcwiuF09z-PwyEbpu-jWaWU6QrkCdT8usg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
           },
           "style": "secondary"

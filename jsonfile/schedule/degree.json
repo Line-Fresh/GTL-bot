@@ -17,7 +17,7 @@
           "contents": [
             {
               "type": "text",
-              "text": "深度旅遊",
+              "text": "虎尾輕旅行",
               "weight": "bold",
               "size": "sm",
               "wrap": true
@@ -35,7 +35,7 @@
                 "action": {
                   "type": "message",
                   "label": "點擊",
-                  "text": "預計旅行方式：深度旅遊"
+                  "text": "預計旅行方式：虎尾輕旅行"
                 },
                 "height": "sm"
               }
