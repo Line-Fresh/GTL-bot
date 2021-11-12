@@ -25,18 +25,18 @@ appear = [False]*5 # for random
 
 def bugfixer(uid):
     if uid not in active_user:
-        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        active_user[uid] = {"guide" : "Johnson", "time" : "3小時", "transportation" : "步行", "type" : "自然", "degree" : "虎尾輕旅行"}
     else:
         if "guide" not in active_user[uid]:
-            active_user[uid]["guide"] = None
+            active_user[uid]["guide"] = "Johnson"
         if "time" not in active_user[uid]:
-            active_user[uid]["time"] = None
+            active_user[uid]["time"] = "3小時"
         if "transportation" not in active_user[uid]:
-            active_user[uid]["transportation"] = None
+            active_user[uid]["transportation"] = "步行"
         if "type" not in active_user[uid]:
-            active_user[uid]["type"] = None
+            active_user[uid]["type"] = "自然"
         if "degree" not in active_user[uid]:
-            active_user[uid]["degree"] = None
+            active_user[uid]["degree"] = "虎尾輕旅行"
     return
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
@@ -86,7 +86,7 @@ def ScheduleHandler(event, profile, msg):
     elif msg == "開始安排行程":
         uid = event.source.user_id
         FlexMessage = json.load(open('jsonfile/schedule/time.json','r',encoding='utf-8'))
-        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+        bugfixer(uid)
         line_bot_api.push_message(
             uid, 
             TextSendMessage(text="預計旅遊時間")
@@ -193,25 +193,25 @@ def SocialHandler(event, profile, msg):
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "美食":
+    elif msg == "社交：美食":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "遊戲":
+    elif msg == "社交：遊戲":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "寵物":
+    elif msg == "社交：寵物":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(alt_text="Test", contents=FlexMessage)
         )
-    elif msg == "事業":
+    elif msg == "社交：事業":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
@@ -275,7 +275,7 @@ def messageHandler(event):
         SiteHandler(event, profile, msg)
     elif msg == "遊戲" or msg == "闖關遊戲" or msg[:4] == "即時競賽":
         GameHandler(event, profile, msg)
-    elif msg == "社交" or msg == "人文小團體" or msg == "人文大團體" or msg == "自然小團體" or msg == "自然大團體" or msg == "隨機生成":
+    elif msg == "社交" or msg == "社交：美食" or msg == "社交：遊戲" or msg == "社交：寵物" or msg == "社交：事業" or msg == "隨機生成":
         SocialHandler(event, profile, msg)
     else:
         GGHandler(event, profile)
