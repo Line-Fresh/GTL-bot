@@ -45,7 +45,7 @@
                   "action": {
                     "type": "message",
                     "label": "美食",
-                    "text": "美食"
+                    "text": "社交：美食"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -58,7 +58,7 @@
                   "action": {
                     "type": "message",
                     "label": "遊戲",
-                    "text": "遊戲"
+                    "text": "社交：遊戲"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -77,7 +77,7 @@
                   "action": {
                     "type": "message",
                     "label": "寵物",
-                    "text": "寵物"
+                    "text": "社交：寵物"
                   },
                   "margin": "none",
                   "height": "sm"
@@ -90,7 +90,7 @@
                   "action": {
                     "type": "message",
                     "label": "事業",
-                    "text": "事業"
+                    "text": "社交：事業"
                   },
                   "margin": "none",
                   "height": "sm"

@@ -90,12 +90,13 @@
           "type": "box",
           "layout": "vertical",
           "contents": [
+            
             {
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "查看更多",
-                "uri": "https://liff.line.me/1582347558-VdW5GZDw/detail/518949223761193128?utm_campaign=518949223761193128&utm_medium=CopyURL&utm_source=Share"
+                "label": "預約",
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
               "margin": "xs",
               "height": "sm"
@@ -104,8 +105,8 @@
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "預約",
-                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
+                "label": "查看更多",
+                "uri": "https://liff.line.me/1582347558-VdW5GZDw/detail/518949223761193128?utm_campaign=518949223761193128&utm_medium=CopyURL&utm_source=Share"
               },
               "margin": "xs",
               "height": "sm"
@@ -207,12 +208,13 @@
           "type": "box",
           "layout": "vertical",
           "contents": [
+            
             {
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "查看更多",
-                "uri": "https://liff.line.me/1582347558-VdW5GZDw/detail/534511402593818724?utm_campaign=534511402593818724&utm_medium=CopyURL&utm_source=Share"
+                "label": "預約",
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
               "margin": "xs",
               "height": "sm"
@@ -221,8 +223,8 @@
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "預約",
-                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
+                "label": "查看更多",
+                "uri": "https://liff.line.me/1582347558-VdW5GZDw/detail/534511402593818724?utm_campaign=534511402593818724&utm_medium=CopyURL&utm_source=Share"
               },
               "margin": "xs",
               "height": "sm"
@@ -323,12 +325,13 @@
           "type": "box",
           "layout": "vertical",
           "contents": [
+            
             {
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "查看更多",
-                "uri": "https://www.huwei.gov.tw/tour/Details.aspx?Parser=13,7,57,,,,11"
+                "label": "預約",
+                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
               },
               "margin": "xs",
               "height": "sm"
@@ -337,8 +340,8 @@
               "type": "button",
               "action": {
                 "type": "uri",
-                "label": "預約",
-                "uri": "https://liff.line.me/1656609310-mYaW4JYE"
+                "label": "查看更多",
+                "uri": "https://www.huwei.gov.tw/tour/Details.aspx?Parser=13,7,57,,,,11"
               },
               "margin": "xs",
               "height": "sm"
