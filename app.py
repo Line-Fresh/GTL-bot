@@ -23,6 +23,21 @@ active_user = {} #temprorary database
 travel_url = ["https://travel.line.me/r/xCdiGGc1V6", "https://travel.line.me/r/HSnQGmNqHk"] #line travel url
 appear = [False]*5 # for random 
 
+def bugfixer(uid):
+    if uid not in active_user:
+        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
+    else:
+        if "guide" not in active_user[uid]:
+            active_user[uid]["guide"] = None
+        if "time" not in active_user[uid]:
+            active_user[uid]["time"] = None
+        if "transportation" not in active_user[uid]:
+            active_user[uid]["transportation"] = None
+        if "type" not in active_user[uid]:
+            active_user[uid]["type"] = None
+        if "degree" not in active_user[uid]:
+            active_user[uid]["degree"] = None
+    return
 # LINE BOT REPLY
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -51,11 +66,11 @@ def ScheduleHandler(event, profile, msg):
             )
     
     elif msg[:2] == "選擇":
+        uid = event.source.user_id
         guide = msg[2:]
         FlexMessage = json.load(open('jsonfile/schedule/reservation.json','r',encoding='utf-8'))
-        active_user[event.source.user_id] = {}
-        active_user[event.source.user_id]["guide"] = guide
-        print(active_user)
+        bugfixer(uid)
+        active_user[uid]["guide"] = guide
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
@@ -71,6 +86,7 @@ def ScheduleHandler(event, profile, msg):
     elif msg == "開始安排行程":
         uid = event.source.user_id
         FlexMessage = json.load(open('jsonfile/schedule/time.json','r',encoding='utf-8'))
+        active_user[uid] = {"guide" : None, "time" : None, "transportation" : None, "type" : None, "degree" : None}
         line_bot_api.push_message(
             uid, 
             TextSendMessage(text="預計旅遊時間")
@@ -86,8 +102,8 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計交通工具")
         )
-        active_user[event.source.user_id] = {}
-        active_user[event.source.user_id]["time"] = msg
+        bugfixer(uid)
+        active_user[uid]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
@@ -99,7 +115,8 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行類別")
         )
-        active_user[event.source.user_id]["transportation"] = msg
+        bugfixer(uid)
+        active_user[uid]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
@@ -111,22 +128,24 @@ def ScheduleHandler(event, profile, msg):
             uid, 
             TextSendMessage(text="預計旅行方式")
         )
-        active_user[event.source.user_id]["type"] = msg
+        bugfixer(uid)
+        active_user[uid]["type"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)
             ) 
     elif msg[:6] == "預計旅行方式":
-        
-        active_user[event.source.user_id]["degree"] = msg
-        user = active_user[event.source.user_id]
+        uid = event.source.user_id
+        bugfixer(uid)
+        active_user[uid]["degree"] = msg
+        user = active_user[uid]
         line = "======================="
-        url = None
+        url = travel_url[random.randint(0, 1)]
         # temprorary, should be modified 
-        if "人文" in user["type"]:
-            url = travel_url[1] 
-        else:
-            url = travel_url[0]
+        # if "人文" in user["type"]:
+        #     url = travel_url[1] 
+        # else:
+        #     url = travel_url[0]
         url = f'參考行程：{url}'
         result = f'生成結果\n{line}\n{user["time"]}\n{user["transportation"]}\n{user["type"]}\n{user["degree"]}\n{url}'
         line_bot_api.reply_message(
@@ -265,6 +284,7 @@ def messageHandler(event):
 @handler.add(PostbackEvent)
 def handle_postback(event):
     uid = event.source.user_id
+    bugfixer(uid)
     active_user[uid]["time"] = event.postback.params['date']
 
     user_name = line_bot_api.get_profile(uid).display_name
