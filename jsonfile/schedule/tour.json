@@ -17,7 +17,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Johnson",
+            "text": "Andy",
             "weight": "bold",
             "size": "sm",
             "wrap": true
@@ -98,7 +98,7 @@
             "action": {
               "type": "message",
               "label": "點擊挑選",
-              "text": "選擇Johnson"
+              "text": "選擇Andy"
             },
             "offsetBottom": "none",
             "offsetTop": "lg"
