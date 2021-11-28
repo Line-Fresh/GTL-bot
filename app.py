@@ -123,31 +123,13 @@ def ScheduleHandler(event, profile, msg):
             ) 
     elif msg[:6] == "預計旅行類別":
         uid = event.source.user_id
-        FlexMessage = json.load(open('jsonfile/schedule/degree.json','r',encoding='utf-8'))
-        line_bot_api.push_message(
-            uid, 
-            TextSendMessage(text="預計旅行方式")
-        )
         bugfixer(uid)
         active_user[uid]["type"] = msg
-        line_bot_api.reply_message(
-                event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
-            ) 
-    elif msg[:6] == "預計旅行方式":
-        uid = event.source.user_id
-        bugfixer(uid)
-        active_user[uid]["degree"] = msg
         user = active_user[uid]
         line = "======================="
         url = travel_url[random.randint(0, 1)]
-        # temprorary, should be modified 
-        # if "人文" in user["type"]:
-        #     url = travel_url[1] 
-        # else:
-        #     url = travel_url[0]
         url = f'參考行程：{url}'
-        result = f'生成結果\n{line}\n{user["time"]}\n{user["transportation"]}\n{user["type"]}\n{user["degree"]}\n{url}'
+        result = f'生成結果\n{line}\n{user["time"]}\n{user["transportation"]}\n{user["type"]}\n{url}'
         line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=result)
@@ -161,7 +143,7 @@ def FoodHandler(event, profile):
 
 def SiteHandler(event, profile, msg):
     if msg == "景點介紹/預約":
-        FlexMessage = json.load(open('jsonfile/site/category.json','r',encoding='utf-8'))
+        FlexMessage = json.load(open('jsonfile/site/category2.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(alt_text="Test", contents=FlexMessage)

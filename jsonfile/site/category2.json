@@ -1,0 +1,148 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://www.lookit.tw/upload/Q7/890/863308976460465bb5fffb12fdaf3735.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "風景",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "風景"
+                },
+                "height": "sm"
+              }
+          ],
+          "spacing": "xs",
+          "margin": "xs",
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://i2.wp.com/img.journey.tw/20180408220323_54.jpg?fit=2000%2C1328&quality=100&ssl=1",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "文化"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "文化"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+          "type": "image",
+          "url": "https://img.snowhy.tw/20200304000737_30.jpg",
+          "size": "full",
+          "aspectMode": "cover",
+          "aspectRatio": "320:213"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "weight": "bold",
+              "size": "sm",
+              "wrap": true,
+              "text": "休閒"
+            }
+          ],
+          "spacing": "sm",
+          "paddingAll": "13px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "點擊",
+                  "text": "休閒"
+                },
+                "height": "sm"
+              }
+          ],
+          "paddingAll": "xs"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      }
+    ]
+  }
