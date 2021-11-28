@@ -116,7 +116,7 @@
               "weight": "bold",
               "size": "sm",
               "wrap": true,
-              "text": "全選"
+              "text": "自然人文兼具"
             }
           ],
           "spacing": "sm",
@@ -131,7 +131,7 @@
                 "action": {
                   "type": "message",
                   "label": "點擊",
-                  "text": "預計旅行類別：全選"
+                  "text": "預計旅行類別：自然人文兼具"
                 },
                 "height": "sm"
               }
