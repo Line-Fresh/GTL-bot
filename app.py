@@ -30,7 +30,7 @@ def bugfixer(uid):
         if "guide" not in active_user[uid]:
             active_user[uid]["guide"] = "Johnson"
         if "time" not in active_user[uid]:
-            active_user[uid]["time"] = "預計旅遊時間：3小時"
+            active_user[uid]["time"] = "預計旅遊時間：9小時"
         if "transportation" not in active_user[uid]:
             active_user[uid]["transportation"] = "預計交通工具：步行"
         if "type" not in active_user[uid]:
@@ -55,14 +55,14 @@ def ScheduleHandler(event, profile, msg):
         FlexMessage = json.load(open('jsonfile/schedule/flex.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     elif msg == "挑選導遊" or msg == "重新選擇":
         print(event.reply_token)
         FlexMessage = json.load(open('jsonfile/schedule/tour.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     
     elif msg[:2] == "選擇":
@@ -73,7 +73,7 @@ def ScheduleHandler(event, profile, msg):
         active_user[uid]["guide"] = guide
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage[guide])
             )
     elif msg == "預約完成":
         guide = msg[2:]
@@ -81,7 +81,7 @@ def ScheduleHandler(event, profile, msg):
         FlexMessage[guide]["body"]["contents"][2]["contents"][0]["contents"][1]["text"] = profile.display_name
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage[guide])
             )
     elif msg == "開始安排行程":
         uid = event.source.user_id
@@ -93,7 +93,7 @@ def ScheduleHandler(event, profile, msg):
         )
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     elif msg[:6] == "預計旅程時間":
         uid = event.source.user_id
@@ -106,7 +106,7 @@ def ScheduleHandler(event, profile, msg):
         active_user[uid]["time"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             ) 
     elif msg[:6] == "預計交通工具":
         uid = event.source.user_id
@@ -119,7 +119,7 @@ def ScheduleHandler(event, profile, msg):
         active_user[uid]["transportation"] = msg
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             ) 
     elif msg[:6] == "預計旅行類別":
         uid = event.source.user_id
@@ -146,25 +146,25 @@ def SiteHandler(event, profile, msg):
         FlexMessage = json.load(open('jsonfile/site/category2.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     elif msg == "風景":
         FlexMessage = json.load(open('jsonfile/site/landscape.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     elif msg == "文化":
         FlexMessage = json.load(open('jsonfile/site/culture.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
     elif msg == "休閒":
         FlexMessage = json.load(open('jsonfile/site/leisure.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage(alt_text="Test", contents=FlexMessage)
+                FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
             )
 
 
@@ -173,31 +173,31 @@ def SocialHandler(event, profile, msg):
         FlexMessage = json.load(open('jsonfile/social/social_opening.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     elif msg == "社交：美食":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     elif msg == "社交：遊戲":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     elif msg == "社交：寵物":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     elif msg == "社交：事業":
         FlexMessage = json.load(open('jsonfile/social/group1.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     elif msg == "隨機生成":
         num = random.randint(2, 4)
@@ -207,7 +207,7 @@ def SocialHandler(event, profile, msg):
         FlexMessage = json.load(open(f'jsonfile/social/group{num}.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
 
 def GameHandler(event, profile, msg):
@@ -215,7 +215,7 @@ def GameHandler(event, profile, msg):
         FlexMessage = json.load(open('jsonfile/game/games.json','r',encoding='utf-8'))
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage)
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage)
         )
     # should have a db to save the details of the game
     elif msg == "闖關遊戲":
@@ -281,7 +281,7 @@ def handle_postback(event):
     )
     line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="Test", contents=FlexMessage[guide])
+            FlexSendMessage(alt_text="Green Thunder Legend", contents=FlexMessage[guide])
         )
 
 @app.route('/book')
